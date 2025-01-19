@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Management Dashboard</title>
+    <link rel="stylesheet" href="Management.css"> 
+    <script src="Management.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Management Dashboard</h1>
+
+        <input type="text" id="search" placeholder="Search by name or email..." onkeyup="filterTable()">
+
+        <input type="text" id="ID" placeholder="Enter ID to remove client" />
+        <button onclick="deleteClient()">Remove Client</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>The Day of the Trip</th>
+                    <th>City</th>
+                    <th>Number of People</th>
+                    <th>Budget Level</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <a href="http://localhost/web-IT/project/MainPage.html" 
+     style="display: block; text-align: center; margin-top: 20px; color: #007bff;"
+    >Home</a>
+    
+</body>
+</html>

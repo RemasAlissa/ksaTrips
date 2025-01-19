@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeddah Trip</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="Jeddah">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Jeddah</h1>
+            <p>Discover the vibrant city of Jeddah, where tradition meets modernity.<br>Experience the unique attractions and historical landmarks.</p>
+            
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Red Sea Boat Tour</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Visit Al-Balad Historic District</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Shopping at Mall of Arabia</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Day at Jeddah Waterfront</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Departure</td>
+                </tr>
+            </table>
+
+            <form method="post">
+                <label for="numPeople">Number of People:</label>
+                <input type="number" id="numPeople" name="numPeople" min="1" required><br>
+
+                <div class="budget">
+                    <p>Budget Level:</p>
+                    <label><input type="radio" name="budget" value="low" required> Low</label>
+                    <label><input type="radio" name="budget" value="medium"> Medium</label>
+                    <label><input type="radio" name="budget" value="high"> High</label>
+                </div>
+
+                <button type="submit">Calculate Cost</button>
+            </form>
+
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $numPeople = intval($_POST['numPeople']);
+                $budget = $_POST['budget'];
+                $costPerPerson;
+
+                if ($budget == 'low') {
+                    $costPerPerson = 6000;
+                } elseif ($budget == 'medium') {
+                    $costPerPerson = 7000;
+                } else {
+                    $costPerPerson = 8000;
+                }
+
+                $totalCost = $numPeople * $costPerPerson;
+                echo "<p>Total Cost: " . $totalCost . " SAR</p>";
+            }
+            ?>
+        </div>
+    </div>
+</body>
+</html>

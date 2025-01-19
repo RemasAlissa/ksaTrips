@@ -1,0 +1,72 @@
+body {
+    background-image: url(registrationImage3.jpg);
+    background-size: cover;
+    font-family: Arial ;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    opacity: 0.9;
+}
+h1 {
+    text-align: center;
+    color: #474646;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.button-container {
+    display: flex; 
+    margin-top: 20px; 
+}
+input[type="submit"],
+input[type="reset"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 49%;
+    margin-right: 2%; 
+}
+input[type="reset"] {
+    background-color: #dc3545;
+}
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+input[type="reset"]:hover {
+    background-color: #c82333;
+}
+.link-home {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}

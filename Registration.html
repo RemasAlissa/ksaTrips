@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="registrationStyle.css"> 
+    <script src="registration.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="Registration">
+            <fieldset>
+                <h1>Welcome to KSA Trips</h1>
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="tripDate">The Day of the Trip:</label>
+                <input type="date" id="tripDate" name="tripDate" required>
+                
+                <label for="city">City:</label>
+                <select id="city" name="city" required>
+                    <option value="Riyadh">Riyadh</option>
+                    <option value="Dammam">Dammam</option>
+                    <option value="Jeddah">Jeddah</option>
+                    <option value="AlUla">Al-Ula</option>
+                </select>
+                
+                <label for="numberOfPeople">Number of People:</label>
+                <input type="number" id="numberOfPeople" name="numberOfPeople" required>
+                
+                <label for="budgetLevel">Budget Level:</label>
+                <select id="budgetLevel" name="budgetLevel" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                
+                <div class="button-container">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </div>
+            </fieldset>
+        </form>
+        <a href="http://localhost/web-IT/project/MainPage.html" class="link-home">Home</a>
+    </div>
+</body>
+</html>

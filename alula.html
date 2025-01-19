@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Al-Ula Trip</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="AlUla">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Al-Ula</h1>
+            <p>Explore the ancient wonders of Al-Ula, a city rich in history and breathtaking landscapes.<br>Embark on a journey through time.</p>
+
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Tour of Madain Saleh</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Visit Al-Ula Old Town</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hiking in Jebel Ikmah</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Stargazing Experience</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Departure</td>
+                </tr>
+            </table>
+
+            
+                <label for="numPeople">Number of People:</label>
+                <input type="number" id="numPeople" name="numPeople" min="1" required><br>
+
+                <div class="budget">
+                    <p>Budget Level:</p>
+                    <label><input type="radio" name="budget" value="low" required> Low</label>
+                    <label><input type="radio" name="budget" value="medium"> Medium</label>
+                    <label><input type="radio" name="budget" value="high"> High</label>
+                </div>
+                <button onclick="calculateCost()">Calculate Cost</button>
+                <p id="result"></p>
+
+        </div>
+    </div>
+    <script>
+        function calculateCost() {
+            const numPeople = document.getElementById('numPeople').value;
+            const budget = document.querySelector('input[name="budget"]:checked').value;
+            let costPerPerson;
+
+            if (budget === 'low') {
+                costPerPerson = 7000;
+            } else if (budget === 'medium') {
+                costPerPerson = 8000;
+            } else {
+                costPerPerson = 9000;
+            }
+
+            const totalCost = numPeople * costPerPerson;
+            document.getElementById('result').textContent = 'Total Cost: ' + totalCost + ' SAR';
+
+        }
+    </script>
+</body>
+</html>
